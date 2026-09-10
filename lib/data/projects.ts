@@ -72,44 +72,6 @@ export const featuredProjects: FeaturedProject[] = [
     video: '/videos/mokupfirma.mp4',
   },
 
-  {
-    id: 'electro-todo',
-    index: '03',
-    name: 'E-commerce',
-    kind: 'PROYECTO × KA',
-    description:
-      'E-commerce desarrollado para llevar su oferta comercial al entorno digital y crear una nueva experiencia de conexión con sus clientes.',
-    role: 'Founder · Software Developer',
-    contributions: [
-      'Diseño',
-      'Desarrollo',
-      'Experiencia de usuario',
-      'Integraciones',
-      'Despliegue',
-    ],
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    image: '/projects/electro-todo.png',
-    imageAlt: 'Interfaz editorial abstracta de un e-commerce para Electro Todo',
-  },
-
-  {
-    id: 'kace',
-    index: '04',
-    name: 'KACE',
-    kind: 'EMPRENDIMIENTO',
-    description:
-      'Proyecto orientado a la generación de imágenes mediante inteligencia artificial para apoyar las necesidades visuales de emprendimientos y proyectos digitales.',
-    role: 'Founder · Software Developer',
-    contributions: [
-      'Concepto y visión de producto',
-      'Investigación de modelos de IA',
-      'Arquitectura de generación de imágenes',
-      'Experiencia de usuario',
-    ],
-    technologies: ['Python', 'IA Generativa', 'FastAPI', 'React'],
-    image: '/projects/kace.png',
-    imageAlt: 'Composición abstracta que representa generación de imágenes con IA',
-  },
 ]
 
 export const academicProjects: AcademicProject[] = [

@@ -6,7 +6,7 @@ export const identity = {
   github: 'https://github.com/KatieChiu',
   githubHandle: 'KatieChiu',
   linkedin: 'https://www.linkedin.com/in/katiechiu',
-  email: 'hola@katiechiu.dev',
+  email: 'chiukatie17@gmail.com',
 }
 
 export const navItems = [
