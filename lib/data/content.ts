@@ -104,7 +104,7 @@ export const education: EducationItem[] = [
   {
     institution: 'Universidad Nacional Autónoma de Honduras — UNAH',
     program: 'Ingeniería en Sistemas',
-    status: 'Graduada',
+    status: ' ',
   },
   {
     institution: 'Oracle Academy',
