@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* KA palette */
+  --color-molten-lava: var(--molten-lava);
+  --color-brick-red: var(--brick-red);
+  --color-papaya-whip: var(--papaya-whip);
+  --color-deep-space-blue: var(--deep-space-blue);
+  --color-steel-blue: var(--steel-blue);
+
+  /* Aliases used by the existing components */
+  --color-beige: var(--beige);
+  --color-beige-light: var(--beige-light);
+  --color-carbon: var(--carbon);
+  --color-coffee-dark: var(--coffee-dark);
+  --color-coffee: var(--coffee);
+  --color-ocre: var(--ocre);
+  --color-terracotta: var(--terracotta);
+  --color-red-deep: var(--red-deep);
+
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: light;
+
+  /* ========================================
+     KA COLOR PALETTE
+     ======================================== */
+
+  --molten-lava: #780000;
+  --brick-red: #c1121f;
+  --papaya-whip: #fdf0d5;
+  --deep-space-blue: #003049;
+  --steel-blue: #669bbc;
+
+  /* ========================================
+     Existing KA aliases
+     ======================================== */
+
+  --beige: var(--papaya-whip);
+  --beige-light: #fff8eb;
+
+  --carbon: var(--deep-space-blue);
+  --coffee-dark: #002638;
+  --coffee: #405d6d;
+
+  --ocre: #b8893f;
+  --terracotta: var(--brick-red);
+  --red-deep: var(--molten-lava);
+
+  /* ========================================
+     Semantic tokens
+     ======================================== */
+
+  --background: var(--papaya-whip);
+  --foreground: var(--deep-space-blue);
+
+  --card: #fff8eb;
+  --card-foreground: var(--deep-space-blue);
+
+  --popover: #fff8eb;
+  --popover-foreground: var(--deep-space-blue);
+
+  --primary: var(--deep-space-blue);
+  --primary-foreground: var(--papaya-whip);
+
+  --secondary: var(--molten-lava);
+  --secondary-foreground: var(--papaya-whip);
+
+  --muted: #f1dfbd;
+  --muted-foreground: #405d6d;
+
+  --accent: var(--brick-red);
+  --accent-foreground: var(--papaya-whip);
+
+  --destructive: var(--molten-lava);
+
+  --border: #ddcba9;
+  --input: #ddcba9;
+
+  --ring: var(--brick-red);
+
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply bg-background;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  ::selection {
+    background: var(--brick-red);
+    color: var(--papaya-whip);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Hide default cursor only on fine-pointer devices
+   where custom cursor runs */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none;
+  }
+}
