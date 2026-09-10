@@ -40,7 +40,7 @@ export function Stack() {
 
         <Reveal delay={0.1}>
           <p className="mt-16 max-w-md font-mono text-xs leading-relaxed text-beige/50">
-            Sin barras de progreso ni porcentajes: herramientas que uso para construir productos
+            herramientas que uso para construir productos
             reales.
           </p>
         </Reveal>
